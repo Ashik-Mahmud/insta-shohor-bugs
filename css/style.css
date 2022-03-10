@@ -246,7 +246,8 @@ img {
 #reported{
   display: none;
 }
-#liked-post{
+#liked-post,
+#reported-post{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 2rem;
