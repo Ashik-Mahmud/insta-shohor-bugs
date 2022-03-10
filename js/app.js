@@ -143,7 +143,11 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+    document.getElementById( "liked-post" ).innerHTML = '';
     const likedPosts = getLikedPosts();
+    if(likedPosts.length === 0){
+        return document.getElementById( "liked-post" ).innerHTML = `<h3 class="text-center m-5 p-4 position-absolute text-muted">No Liked Post Available.</h3>`;
+    }
     likedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById("liked-post" ).appendChild(div);
