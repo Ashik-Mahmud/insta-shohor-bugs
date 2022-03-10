@@ -153,6 +153,9 @@ const displayLikedPosts = () => {
 const displayReportedPosts = () => {
     document.getElementById( "reported-post" ).innerHTML = '';
     const reportedPosts = getReportedPosts();
+    if(reportedPosts.length === 0){
+        return document.getElementById( "reported-post" ).innerHTML = `<h3 class="text-center m-5 p-4 position-absolute text-muted">No Reported Post Available.</h3>`;
+    }
     reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported-post" ).appendChild(div);
