@@ -26,9 +26,25 @@ const reportPost = (id) => {
     showPosts(remainingPosts);
 };
 
-const displayContent = (text) => {
-    return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold cursor-pointer'>... read more</span>";
+const displayContent = (image, text) => {
+    return text.length < 30 ? text : text.slice(0, 30) + `<span onclick='showDetails("${image}", "${text}")' class='fw-bold cursor-pointer'>... read more</span>`;
 };
+
+/*  showing details  */
+const canvasWrapper = document.getElementById("details-canvas");
+const showDetails = (image, desc) =>{
+    canvasWrapper.classList.add("active-canvas")
+    document.querySelector(".description-wrapper").innerHTML = `
+                    <img class="img-fluid" src="${image}"
+                        alt="">
+                    <div class="description">
+                        ${desc}
+                    </div>
+                `;
+}
+document.addEventListener("click", (event)=>{
+    if(event.target.id === 'details-canvas') canvasWrapper.classList.remove('active-canvas');
+})
 
 const switchTab = (id) => {
     if (id === "posts") {
@@ -102,7 +118,7 @@ const createPost = (post) => {
                   </button>
                 </div>
 
-                <div class="post__content">${displayContent(post.description)}</div>
+                <div class="post__content">${displayContent(image, post.description)}</div>
 
                 <div class="post__infos">
                   <div class="post__likes">
