@@ -15,9 +15,9 @@ const isLiked = (id) => {
     return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 
-const addToLiked = (id) => {
+const addToLiked = (event, id) => {
     likedPostsId.push(id); 
-    showPosts(posts);
+    event.querySelector('i').classList.add('text-danger')
 };
 
 const reportPost = (id) => {
@@ -100,7 +100,7 @@ const createPost = (post) => {
 
               <div class="post__footer">
                 <div class="post__buttons">
-                  <button class="post__button" onclick="addToLiked(${post.id})">
+                  <button class="post__button" onclick="addToLiked(this, ${post.id})">
                   <i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i>
                     
                   </button>
