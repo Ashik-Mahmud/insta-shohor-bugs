@@ -43,7 +43,9 @@ svg {
 img {
   max-width: 100%;
 }
-
+.cursor-pointer{
+    cursor: pointer;
+}
 #posts{
   display: grid;
   gap: 10px;
