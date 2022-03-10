@@ -39,7 +39,13 @@ textarea {
 svg {
   display: block;
 }
-
+details summary{
+    font-size: 20px;
+}
+details p{
+    font-size: 18px;
+    line-height: 1.7;
+}
 img {
   max-width: 100%;
 }

@@ -86,15 +86,49 @@
                     <div class="faq-container">
                         <details class="bg-light p-3 mb-2">
                             <summary >How does JavaScript works?</summary>
-                            <p class="bg-white p-3 my-2">javascript is one of the most interpretter programming languages</p>
-                        </details>
-                        <details class="bg-light p-3 mb-2">
-                            <summary >How does basically done Event Loop?</summary>
-                            <p class="bg-white p-3 my-2">javascript is one of the most interpretter programming languages</p>
+                            <p class="bg-white p-3 my-2">
+                                We know javascript basically used for client side to make for interactive of our web page. It's completely single-threated programming languages [most of the times people know  as scripting languages] thats why it has only one call stack basically that is the reason javascript code run line by line inside of javascript file. Now Question is how does javascript works inside of Browser? Okay cool! Basically all the modern browser has their Engine to compiled javascript code into machine code to understanding browser. If we think like Google chrome V8 engine which one is compiled our javascript code using Just-In-Time compiler & make it machine code for browser in the same way to happen for every browser like Mozila - spidermonkey, Safari - JavaScript Core, Edge - chakra  & that's the way javascript code works.   
+                            </p>
                         </details>
                         <details class="bg-light p-3 mb-2">
                             <summary >What's difference between LocalStorage & SessionStorage?</summary>
-                            <p class="bg-white p-3 my-2">javascript is one of the most interpretter programming languages</p>
+                            <p class="bg-white p-3 my-2">
+                                LocalStorage & SessionStorage basically Web API that means it's built-in side of browser. Those are works like as storages to store bit of data to tracking & remaining users. It's almost same then it's has a bit of difference which one is- 
+                                <table class="table bg-white">
+                                    <thead>
+                                        <tr>
+                                            <th>LocalStorage</th>
+                                            <th>SessionStorage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>LocalStorage data storing capacity limit almost 5-10 MB</td>
+                                            <td>SessionStorage data storing capacity limit 5MB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data never remove unless you remove manually or using javascript.</td>
+                                            <td>Data remove if user close the particular browser or Tab.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LocalStorage use for storing data long time</td>
+                                            <td>SessionStorage use for storing data temporary just use until browser open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LocalStorage can't send a http request into server.</td>
+                                            <td>SessionStorage can't send a http request into server as well.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>I think localStorage is less secure(e.g - another person can access your data later on)</td>
+                                            <td>I think sessionStorage is more secure</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </details>
+                        <details class="bg-light p-3 mb-2">
+                            <summary >How does basically done Event Loop?</summary>
+                            <p class="bg-white p-3 my-2">We know JavaScript is interpreted languages it's not compile when it's run like c++, java etc. Inside the javascript run code again & again it's like a loop you means while loop. Event loop is secret behind the javascript asynchronous. <b>I can't understand Event Loop perfectly please make a videos about Event loop & upload as a bonus video. I have read lot's more article but I can not perfectly understand. 😥</b></p>
                         </details>
                     </div>
                 </div>
